@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from './axios'; //creating an alias we can call it axios instead of instance coz it's a default export
+import './Row.css';
+
 
 // we need a snippet of code that runs based on a specific condition or variable
 
@@ -29,7 +31,7 @@ function Row({title, fetchURL}){
     // since this hook depends on fetchURL it is now a dependency and all the dependencies 
     // need to be included coz the code needs rerendering when it changes
     
-    console.table(movies);
+    // console.table(movies);
     return(
         <div className='row'>
             {/* title */}
@@ -41,8 +43,10 @@ function Row({title, fetchURL}){
 
                 {movies.map(movie => (
                     <img  
-                    className='row_poster'
-                    src={`${baseURL}${movie.poster_path}`} alt={movie.name} />
+                        key={movie.id}
+                        className='row_poster'
+                        src={`${baseURL}${movie.poster_path}`} alt={movie.name} 
+                    />
                 ))}
             </div>
         </div>
