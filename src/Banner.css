@@ -14,6 +14,7 @@
     font-size: 3rem;
     font-weight: 800;
     padding-bottom: 0.3rem ;
+    /* text-align: left; */
 }
 .banner_description {
     width: 45rem;
@@ -48,10 +49,10 @@
 
 .banner--fadeBottom{
     height: 7.4rem;
-    background-image: linear-gradient(
+    background-color: linear-gradient(
         180deg,
         transparent,
-        Orgba(37, 37, 37, 0.61),
+        rgba(37, 37, 37, 0.61),
         #111
     );
 }
